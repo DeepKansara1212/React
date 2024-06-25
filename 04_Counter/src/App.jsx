@@ -16,7 +16,25 @@ function App() {
     // setCounter(counter) 
 
     if (counter < 20) { 
-      setCounter(counter + 1) 
+      // setCounter(counter + 1) 
+
+      // When we write this type of code, then also value of counter is incrimented by 1
+      // setCounter(counter + 1) 
+      // setCounter(counter + 1) 
+      // setCounter(counter + 1) 
+      // setCounter(counter + 1) 
+
+      // So by increasing the counter value, we have to write them as a callback function
+
+      // setCounter(() => {}) -> Callback function is already inside of the setCounter method, but it is work behind the scene.
+
+      setCounter(prevCounter => prevCounter + 1) 
+      setCounter(prevCounter => prevCounter + 1) 
+      setCounter(prevCounter => prevCounter + 1) 
+      setCounter(prevCounter => prevCounter + 1) 
+
+      // Now at the end of the code it will increment the counter value by 4
+      // So 5, 9, 13, 17, ...
     } 
   } 
 
